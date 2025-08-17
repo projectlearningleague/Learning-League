@@ -1,0 +1,146 @@
+body{
+    margin: 0px;
+    padding: 0;
+    border: 5px;
+    background-color: rgb(255, 255, 255);
+    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('logo.png') center/cover no-repeat;
+    background-attachment:fixed;
+    background-position: center;
+    background-size: 30%;
+    backdrop-filter: 100;
+    background-repeat: no-repeat;
+}
+#main{
+    display: flex;
+}
+#section{
+    padding: 20px;
+    flex: 8.5;
+}
+#aside{
+    padding: 20px;
+    flex: 1.5;
+}
+
+#title-container {
+    position: fixed;    /* stick to viewport (doesn’t move on scroll) */
+    top: 0;               /* ceiling */
+    right: 0;             /* right wall */
+    display: flex;        /* logo + title in a row */
+    align-items: center;  /* vertical alignment */
+    padding: 10px;        /* small spacing from edges (optional) */
+    padding-top: 0;
+    background: rgba(255, 255, 255, 0);    /* optional: so text/logo don’t overlap content */
+}
+
+#logo {
+    margin-left: 10px;
+    height: 40px;         /* adjust logo size */
+    margin-right: 10px;  /* space between logo and title */
+    border: 2px solid rgba(255, 255, 255, 0.365);
+}
+
+#title {
+    font-size: 50px;
+    margin: 0;              /* remove extra space */
+    padding: 0;
+    color: white;
+    text-align: right;
+    padding: 0px;
+    margin: 0;   /* removes default margin if it's a heading like <h1> */
+}
+
+header{
+    height: 60px;
+    background-color: rgb(114, 129, 160);
+}
+
+.navbar{
+    display: inline-block;
+    width: 60%;
+    height: 59px;
+    margin-left: 0px;
+    list-style: none;
+}
+
+.navbar ul{
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    font-size: 25px;
+    overflow: hidden;
+}
+
+.navbar li{
+    float: left;
+}
+
+.navbar a{
+    background-color: hsla(37, 95%, 84%, 0) ;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    font-size: 35px;
+}
+
+.navbar a:hover{
+    /*color: rgba(72, 58, 179, 0.8);
+    background-color: hsla(0, 0%, 100%, 0.4);*/
+    color: rgb(114, 129, 160);
+    background-color: white;
+}
+
+.aside{
+    font-size: 20px;
+}
+.aside li{
+    list-style-type:disc;
+    color: rgb(114, 129, 160);
+}
+.aside a{
+    text-decoration: none;
+}
+.aside h2{
+    color: rgba(72, 58, 179);
+}
+
+.section a{
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.section{
+    text-align: justify;
+}
+.section p{
+    margin-left: 10vb;
+    font-size: 20px;
+    width:60%
+}
+
+.section H2{
+    color: rgba(72, 58, 179);
+    font-size: 45px;
+    border-bottom: 2px solid black;
+}
+.section h5{
+    margin: 10px;
+    color: rgba(72, 58, 179);
+    font-size: 30px;
+}
+
+.section li{
+    font-size: 20px;
+}
+
+
+footer{
+    padding: 10px;
+    font-size: 15px;
+    background-color: darkgray;
+    color: white;
+}
