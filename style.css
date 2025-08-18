@@ -28,7 +28,7 @@ header {
     align-items: center;
     padding: 0 15px;
     height: auto;
-    background-color: rgb(114, 129, 160);
+    background-color: #778DA9;
     flex-wrap: wrap; /* allows wrapping on small screens */
 }
 
@@ -48,7 +48,7 @@ header {
     color: white;
     text-decoration: none;
     font-size: 40px;
-    padding: 5px 10px;
+    padding: 7.5px 10px;
 }
 
 #title-container {
@@ -65,11 +65,12 @@ header {
 #title {
     font-size: 50px;
     margin: 0;
+    text-align: center;
     color: white;
 }
 
 .navbar a:hover{
-    color: rgb(114, 129, 160);
+    color: #778DA9;
     background-color: white;
 }
 
@@ -78,19 +79,21 @@ header {
 }
 .aside li{
     list-style-type:disc;
-    color: rgb(114, 129, 160);
+    color: #415A77;
 }
 .aside a{
+    color: #1B263B;
     text-decoration: none;
 }
 .aside h2{
-    color: rgba(72, 58, 179);
+    color: #415A77;
 }
 
 .section a{
     text-align: center;
     text-decoration: none;
     font-size: 20px;
+    color: #1B263B;
 }
 
 .section{
@@ -99,29 +102,31 @@ header {
 .section p{
     margin-left: 10vb;
     font-size: 20px;
-    width:60%
+    width:60%;
+    color: #0D1B2A;
 }
 
 .section H2{
-    color: rgba(72, 58, 179);
+    color: #415A77;
     font-size: 45px;
     border-bottom: 2px solid black;
 }
 .section h5{
     margin: 10px;
-    color: rgba(72, 58, 179);
+    color: #415A77;
     font-size: 30px;
 }
 
 .section li{
     font-size: 20px;
+    color: #1B263B
 }
 
 
 footer{
     padding: 10px;
     font-size: 15px;
-    background-color: darkgray;
+    background-color: #0D1B2A;
     color: white;
 }
 
@@ -131,6 +136,7 @@ footer{
         flex-direction: column;
         align-items: flex-start;
         text-align: left;
+        height: auto;
     }
     .navbar ul {
         flex-direction: column;
@@ -145,7 +151,7 @@ footer{
     }
 
     .navbar a:active{
-        color: rgb(114, 129, 160);
+        color: #778DA9;
         background-color: white;
     }
 
