@@ -22,73 +22,53 @@ body{
     flex: 1.5;
 }
 
+header {
+    display: flex;
+    justify-content: space-between; /* navbar left, title/logo right */
+    align-items: center;
+    padding: 0 15px;
+    height: auto;
+    background-color: rgb(114, 129, 160);
+    flex-wrap: wrap; /* allows wrapping on small screens */
+}
+
+.navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.navbar li {
+    margin: 5px 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 40px;
+    padding: 5px 10px;
+}
+
 #title-container {
-    position: fixed;    /* stick to viewport (doesn’t move on scroll) */
-    top: 0;               /* ceiling */
-    right: 0;             /* right wall */
-    display: flex;        /* logo + title in a row */
-    align-items: center;  /* vertical alignment */
-    padding: 10px;        /* small spacing from edges (optional) */
-    padding-top: 0;
-    background: rgba(255, 255, 255, 0);    /* optional: so text/logo don’t overlap content */
+    display: flex;
+    align-items: center;
+    margin-left: auto;
 }
 
 #logo {
+    height: 50px;
     margin-left: 10px;
-    height: 40px;         /* adjust logo size */
-    margin-right: 10px;  /* space between logo and title */
-    border: 2px solid rgba(255, 255, 255, 0.365);
 }
 
 #title {
     font-size: 50px;
-    margin: 0;              /* remove extra space */
-    padding: 0;
+    margin: 0;
     color: white;
-    text-align: right;
-    padding: 0px;
-    margin: 0;   /* removes default margin if it's a heading like <h1> */
-}
-
-header{
-    height: 60px;
-    background-color: rgb(114, 129, 160);
-}
-
-.navbar{
-    display: inline-block;
-    width: 60%;
-    height: 59px;
-    margin-left: 0px;
-    list-style: none;
-}
-
-.navbar ul{
-    text-decoration: none;
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
-    font-size: 25px;
-    overflow: hidden;
-}
-
-.navbar li{
-    float: left;
-}
-
-.navbar a{
-    background-color: hsla(37, 95%, 84%, 0) ;
-    color: white;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-    padding: 10px;
-    font-size: 35px;
 }
 
 .navbar a:hover{
-    /*color: rgba(72, 58, 179, 0.8);
-    background-color: hsla(0, 0%, 100%, 0.4);*/
     color: rgb(114, 129, 160);
     background-color: white;
 }
@@ -143,4 +123,88 @@ footer{
     font-size: 15px;
     background-color: darkgray;
     color: white;
+}
+
+/* Mobile responsive fixes */
+@media screen and (max-width: 800px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar li {
+        margin: 5px 0;
+        margin-left: 0;
+    }
+    .navbar a{
+        font-size: 25px;
+    }
+
+    .navbar a:active{
+        color: rgb(114, 129, 160);
+        background-color: white;
+    }
+
+    #title-container {
+        margin-top: 10px;
+        justify-content: center;
+        width: 100%;
+    }
+    #title {
+        font-size: 30px;
+    }
+    #main{
+        display: block;
+    }
+    /*Section on mobile*/
+    .section a{
+        text-align: center;
+        text-decoration: none;
+        font-size: 18px;
+        margin: 10px
+    }
+
+    .section{
+        text-align: justify;
+    }
+    .section p{
+        margin-left: 5vb;
+        font-size: 18px;
+        width:80%
+    }
+
+    .section H2{
+        text-align: center;
+        color: rgba(72, 58, 179);
+        font-size: 35px;
+        border-bottom: 2px solid black;
+    }
+    .section h5{
+        margin: 10px;
+        color: rgba(72, 58, 179);
+        font-size: 25px;
+    }
+
+    .section li{
+        font-size: 18px;
+    }
+    /*Aside for mobile*/
+    .aside{
+        font-size: 17px;
+    }
+    .aside li{
+        list-style-type:disc;
+        color: rgb(114, 129, 160);
+    }
+    .aside a{
+        font-size: 17px;
+        text-decoration: none;
+    }
+    .aside h2{
+        color: rgba(72, 58, 179);
+    }
 }
