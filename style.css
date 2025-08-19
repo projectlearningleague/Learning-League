@@ -3,7 +3,7 @@ body{
     padding: 0;
     border: 5px;
     background-color: #ffffff;
-    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('logo.png') center/cover no-repeat;
+    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('logo.webp') center/cover no-repeat;
     background-attachment:fixed;
     background-position: center;
     background-size: 30%;
@@ -29,7 +29,7 @@ header {
     align-items: center;
     padding: 0 15px;
     height: auto;
-    background-color: #415A77;
+    background: linear-gradient(180deg, #415A77,#415a77dc);
     flex-wrap: wrap; /* allows wrapping on small screens */
 }
 
@@ -102,7 +102,7 @@ header {
 }
 
 #introwords{
-        width:50%;
+    width:50%;
 }
 
 .section p{
@@ -123,7 +123,13 @@ header {
     font-size: 30px;
 }
 
+@media(min-width: 800px){
+    .section ol{
+        min-width: 577px;
+    }
+}
 .section ol{
+    max-width: 577px;
     height: auto;
 }
 .section li{
@@ -133,7 +139,7 @@ header {
     width: 150px;
     height: 150px;
     border: #1B263B solid 5px;
-    background-color: #778DA9;
+    background: radial-gradient(#778da9c5,#778da9);
     border-radius: 10px;
     font-size: 20px;
     color: #1B263B;
@@ -221,16 +227,19 @@ footer{
     }
 
     .section ol{
+        min-width: none;
         width: 90%;
         height: auto;
         display:grid;
     }
     .section li{
+        min-width: none;
+        max-width: 500px;
         align-items: center;
         width: 80%;
         height: auto;
         padding: 0px;
-        border: #1B263B solid 1px;
+        border: #1B263B solid 2px;
         border-radius: 5px;
     }
     .section a{
