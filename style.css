@@ -3,7 +3,7 @@ body{
     padding: 0;
     border: 5px;
     background-color: #ffffff;
-    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('logo.webp') center/cover no-repeat;
+    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('Graphics/logo.webp') center/cover no-repeat;
     background-attachment:fixed;
     background-position: center;
     background-size: 30%;
@@ -23,6 +23,8 @@ body{
     flex: 1.5;
 }
 
+
+/*Header*/
 header {
     display: flex;
     justify-content: space-between; /* navbar left, title/logo right */
@@ -75,6 +77,7 @@ header {
     background-color: white;
 }
 
+/*Aside*/
 .aside{
     font-size: 20px;
 }
@@ -90,6 +93,7 @@ header {
     color: #415A77;
 }
 
+/*Section*/
 .section a{
     text-align: center;
     text-decoration: none;
@@ -124,36 +128,73 @@ header {
 }
 
 @media(min-width: 800px){
-    .section ol{
+    .availist{
         min-width: 577px;
     }
 }
-.section ol{
+
+/*Offered Bar*/
+.intro ul{
+    margin-left: 9vb;
+}
+.intro li{
+    margin: auto;
+    display: inline-grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    background: radial-gradient(#DAF5FF,#beeeff);
+    border: #beeeff solid 5px;
+    border-radius: 10px;
+    height: 80px;
+    width: 80px;
+    list-style: none;
+    padding: 10px;
+}
+.intro img{
+    display: block;
+    margin: auto;
+    height: 80px;
+}
+
+/*Table of content*/
+.availist{
+    margin-left: 8%;
     max-width: 577px;
     height: auto;
 }
-.section li{
+.availist li{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: inline-grid;
     margin: 5px;
     width: 150px;
     height: 150px;
-    border: #1B263B solid 5px;
-    background: radial-gradient(#778da9c5,#778da9);
+    border: #DAF5FF solid 5px;
+    background: radial-gradient(#daf5ff98,#DAF5FF);
     border-radius: 10px;
-    font-size: 20px;
-    color: #1B263B;
+    font-size: 25px;
+    color: #0081CC;
     padding: 10px;
 }
-.section a{
-    text-align: center;
+
+.availist img{
+    height: 70px;
+    max-width: 80px;
+    margin-top: auto;
+    margin-left: auto;
+}
+
+.availist a{
+    font-size: 22px;
+    text-decoration: solid, #0081CC 2px;
+    color: #0081CC;
+    text-align: left;
     vertical-align: middle;
 }
-.section li:hover{
+.availist li:hover{
+    border-color: #beeeff;
     transform: scale(1.05);
 }
 
-
+/*Footer*/
 footer{
     padding: 10px;
     font-size: 15px;
@@ -163,6 +204,7 @@ footer{
 
 /* Mobile responsive fixes */
 @media screen and (max-width: 800px) {
+    /*Header*/
     header {
         flex-direction: column;
         align-items: flex-start;
@@ -197,14 +239,10 @@ footer{
     #main{
         display: block;
     }
-    /*Section on mobile*/
-    .section a{
-        text-align: center;
-        text-decoration: none;
-        font-size: 18px;
-        margin: 10px
+    .intro ul{
+        display: none;
     }
-
+    /*Section on mobile*/
     .section{
         text-align: justify;
     }
@@ -225,28 +263,40 @@ footer{
         color: rgba(72, 58, 179);
         font-size: 25px;
     }
-
-    .section ol{
+    /*Table of Content*/
+    .availist ol{
+        padding-left: none;
+        padding-right: none;
+        margin: none;
         min-width: none;
         width: 90%;
         height: auto;
         display:grid;
     }
-    .section li{
+    .availist img{
+        display: none;
+    }
+    .availist li{
+        margin: 5px;
+        font-size: 25px;
         min-width: none;
         max-width: 500px;
         align-items: center;
         width: 80%;
         height: auto;
-        padding: 0px;
-        border: #1B263B solid 2px;
+        padding: 10px;
+        border: #DAF5FF solid 2px;
         border-radius: 5px;
     }
-    .section a{
-        font-size: 15px;
-    }
-    .section li:active{
+    .availist li:active{
         transform: scale(1.05);
+        border-color: #beeeff;
+    }
+    .availist a{
+        text-align: center;
+        text-decoration: none;
+        font-size: 18px;
+        margin: 10px
     }
 
     /*Aside for mobile*/
