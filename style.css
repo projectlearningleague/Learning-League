@@ -1,3 +1,4 @@
+/*{margin: 0; padding: 0; box-sizing: border-box;}*/
 body{
     margin: 0px;
     padding: 0;
@@ -9,6 +10,11 @@ body{
     background-size: 30%;
     backdrop-filter: 100;
     background-repeat: no-repeat;
+}
+ul, ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 #main{
@@ -29,31 +35,133 @@ header {
     display: flex;
     justify-content: space-between; /* navbar left, title/logo right */
     align-items: center;
-    padding: 0 15px;
     height: auto;
-    background: linear-gradient(180deg, #415A77,#415a77dc);
+    background:linear-gradient(90deg, #415a77,#415a77dd);
     flex-wrap: wrap; /* allows wrapping on small screens */
 }
 
-.navbar ul {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+/* Top navbar */
+.navbar {
+  display: flex;
+  list-style: none;
+  padding: 0 0px;
+  font-size: 30px;
+  width: auto;
 }
 
-.navbar li {
-    margin: 5px 10px;
+.navbar > li {
+  position: relative;
 }
 
-.navbar a {
-    color: white;
-    text-decoration: none;
-    font-size: 40px;
-    padding: 7.5px 10px;
+.navbar > li > a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  background: #ffffff00;
 }
 
+.navbar > li > a:hover {
+  background: #ffffff; /* light blue hover */
+  color: #415A77;
+}
+
+/* First dropdown: Classes */
+/* Dropdown container (Classes) */
+.dropdown {
+  position: relative;
+}
+
+/* Hide dropdown by default */
+/* First dropdown: Classes */
+.dropdown-menu {
+  display: none;
+  position: fixed;   /* instead of absolute */
+  top: 60px;         /* just below navbar height */
+  left: 0;           /* flush with viewport left */
+  width: 100vw;      /* full screen width */
+  background: #fff;
+  padding: 20px;
+  grid-template-columns: repeat(7, auto);
+  gap: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  z-index: 1000;
+  font-size: 25px;
+}
+
+.dropdown:hover > .dropdown-menu {
+  display: grid;
+}
+/* Dropdowns hidden by default */
+.dropdown-menu {
+  display: none;
+  position: fixed;   /* instead of absolute */
+  top: 60px;         /* just below navbar height */
+  left: 0;           /* flush with viewport left */
+  width: 100%;      /* full screen width */
+  background: #ffffff25; /*linear-gradient(180deg, #415a77ef,#415a77)*/
+  padding: 20px;
+  grid-template-columns: repeat(7, auto);
+  gap: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  z-index: 1000;
+  font-size: 25px;
+}
+
+.dropdown:hover > .dropdown-menu {
+  display: grid;
+}
+
+
+/* Each class box */
+.sub-dropdown > a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff; /* blue class heading */
+  display: block;
+  margin-bottom: 0px;
+  padding: 7px 5px;
+}
+
+.sub-dropdown > a:hover {
+  background: rgba(173, 216, 230, 0.3);
+  border-radius: 4px;
+}
+
+/* Subject list under each class */
+.sub-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sub-menu li a {
+  display: block;
+  padding: 5px 0;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  padding-left: 5px;
+}
+
+.sub-menu li a:hover {
+  background: rgba(173, 216, 230, 0.3);
+  border-radius: 4px;
+}
+
+/* Hamburger hidden on PC */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  margin: 10px;
+}
+
+/*Title*/
 #title-container {
     display: flex;
     align-items: center;
@@ -70,11 +178,6 @@ header {
     margin: 0;
     text-align: center;
     color: white;
-}
-
-.navbar a:hover{
-    color: #415A77;
-    background-color: white;
 }
 
 /*Aside*/
@@ -127,46 +230,62 @@ header {
     font-size: 30px;
 }
 
-@media(min-width: 800px){
-    .availist{
-        min-width: 577px;
-    }
-}
-
-/*Offered Bar*/
-.intro ul{
+/*Feature Bar*/
+#featuredbar{
     margin-left: 9vb;
+    width:auto;
 }
-.intro li{
+.featuredbar h6{
+    color: #415A77;
+    font-size: 20px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.featuredbar li{
     margin: auto;
     display: inline-grid;
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     background: radial-gradient(#DAF5FF,#beeeff);
     border: #beeeff solid 5px;
     border-radius: 10px;
-    height: 80px;
-    width: 80px;
+    height: 120px;
+    width: 120px;
     list-style: none;
     padding: 10px;
 }
-.intro img{
+.featuredbar img{
+    font-size: 10px;
     display: block;
     margin: auto;
-    height: 80px;
+    height: 60px;
+}
+.featuredbar b{
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium';
+    color: #0081CC;
+    text-align: center;
 }
 
 /*Table of content*/
+/*@media(min-width: 800px){
+    .availist{
+        min-width: 636px;
+    }
+    .availist li{
+        grid-column: 2 170px;
+    }
+}*/
 .availist{
-    margin-left: 8%;
-    max-width: 577px;
+    margin: auto;
+    max-width: 637px;
     height: auto;
 }
 .availist li{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: inline-grid;
     margin: 5px;
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 170px;
     border: #DAF5FF solid 5px;
     background: radial-gradient(#daf5ff98,#DAF5FF);
     border-radius: 10px;
@@ -179,7 +298,6 @@ header {
     height: 70px;
     max-width: 80px;
     margin-top: auto;
-    margin-left: auto;
 }
 
 .availist a{
@@ -198,38 +316,75 @@ header {
 footer{
     padding: 10px;
     font-size: 15px;
-    background-color: #0D1B2A;
+    background-color: #415A77;
     color: white;
 }
 
 /* Mobile responsive fixes */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 830px) {
     /*Header*/
     header {
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
         text-align: left;
         height: auto;
     }
-    .navbar ul {
+
+    /* Navbar goes vertical */
+    .navbar {
+        display: none;        /* hidden by default */
         flex-direction: column;
         width: 100%;
-    }
-    .navbar li {
-        margin: 5px 0;
-        margin-left: 0;
-    }
-    .navbar a{
-        font-size: 25px;
+        background: #ffffff00;
     }
 
-    .navbar a:active{
-        color: #778DA9;
-        background-color: white;
+    /* Make dropdowns stack */
+    .dropdown-menu {
+        position: static;
+        width: 110%;
+        display: none;
+        grid-template-columns: 1fr;
+        padding: 10px;
+        box-shadow: none;
+        margin: 0px;
     }
 
+    /* ✅ New: show only when JS toggles .open */
+    .dropdown.open > .dropdown-menu {
+        display: block;
+    }
+
+    /* Subjects stack neatly */
+    .sub-menu li a {
+        padding-left: 15px;
+        font-size: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar.active {
+        display: flex;        /* shown when toggled */
+    }
+
+    /* Hide subject lists on mobile */
+    .sub-menu {
+        display: none;
+        padding-left: 25px;
+        background-color: #ffffff00;
+    }
+
+    /* Show when JS toggles .open on parent class */
+    .sub-dropdown.open > .sub-menu {
+        display: block;
+    }
+
+
+    /*Title*/
     #title-container {
         margin-top: 10px;
+        margin: auto 0;
         justify-content: center;
         width: 100%;
     }
@@ -239,8 +394,28 @@ footer{
     #main{
         display: block;
     }
-    .intro ul{
-        display: none;
+    /*Intro*/
+    #introwords{
+        width: 70%;
+    }
+    /*Feature Bar*/
+    #featuredbar{
+        margin-left: 0vb;
+        text-align: center;
+    }
+    .featuredbar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .featuredbar img{
+        height: 50px;
+        
+    }
+    .featuredbar li{
+        width: 150px;
+        height: auto;
+        margin: 10px;
     }
     /*Section on mobile*/
     .section{
@@ -265,10 +440,7 @@ footer{
     }
     /*Table of Content*/
     .availist ol{
-        padding-left: none;
-        padding-right: none;
-        margin: none;
-        min-width: none;
+        margin-left: 0%;
         width: 90%;
         height: auto;
         display:grid;
