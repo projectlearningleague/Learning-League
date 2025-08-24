@@ -100,7 +100,7 @@ header {
   top: 60px;         /* just below navbar height */
   left: 0;           /* flush with viewport left */
   width: 100%;      /* full screen width */
-  background: #ffffff25; /*linear-gradient(180deg, #415a77ef,#415a77)*/
+  background: linear-gradient(180deg, #415a77ef,#415a77);
   padding: 20px;
   grid-template-columns: repeat(7, auto);
   gap: 20px;
@@ -487,3 +487,4 @@ footer{
         color: rgba(72, 58, 179);
     }
 }
+
