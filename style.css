@@ -55,7 +55,7 @@ header {
 
 .navbar > li > a {
   display: block;
-  padding: 15px 20px;
+  padding: 15px 10px;
   text-decoration: none;
   color: #ffffff;
   font-weight: 600;
@@ -75,53 +75,36 @@ header {
 
 /* Hide dropdown by default */
 /* First dropdown: Classes */
-.dropdown-menu {
-  display: none;
-  position: fixed;   /* instead of absolute */
-  top: 60px;         /* just below navbar height */
-  left: 0;           /* flush with viewport left */
-  width: 100vw;      /* full screen width */
-  background: #fff;
-  padding: 20px;
-  grid-template-columns: repeat(7, auto);
-  gap: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  z-index: 1000;
-  font-size: 25px;
-}
-
 .dropdown:hover > .dropdown-menu {
   display: grid;
 }
 /* Dropdowns hidden by default */
 .dropdown-menu {
-  display: none;
-  position: fixed;   /* instead of absolute */
-  top: 60px;         /* just below navbar height */
-  left: 0;           /* flush with viewport left */
-  width: 100%;      /* full screen width */
-  background: linear-gradient(180deg, #415a77ef,#415a77);
-  padding: 20px;
-  grid-template-columns: repeat(7, auto);
-  gap: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  z-index: 1000;
-  font-size: 25px;
+    display: none;
+    position: fixed;   /* instead of absolute */
+    top: 60px;         /* just below navbar height */
+    left: 0;           /* flush with viewport left */
+    width: 100%;      /* full screen width */
+    background: linear-gradient(180deg, #415a77ef,#415a77);
+    padding: 20px;
+    grid-template-columns: repeat(7, auto);
+    gap: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    z-index: 1000;
+    font-size: 25px;
 }
 
 .dropdown:hover > .dropdown-menu {
-  display: grid;
+    display: grid;
 }
 
-
-/* Each class box */
 .sub-dropdown > a {
-  font-weight: bold;
-  text-decoration: none;
-  color: #ffffff; /* blue class heading */
-  display: block;
-  margin-bottom: 0px;
-  padding: 7px 5px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff; /* blue class heading */
+    display: block;
+    margin-bottom: 0px;
+    padding: 7px 5px;
 }
 
 .sub-dropdown > a:hover {
@@ -141,7 +124,7 @@ header {
   padding: 5px 0;
   text-decoration: none;
   color: #ffffff;
-  font-size: 1rem;
+  font-size: 1.1rem;
   padding-left: 5px;
 }
 
@@ -298,6 +281,7 @@ header {
     height: 70px;
     max-width: 80px;
     margin-top: auto;
+    margin-left: auto;
 }
 
 .availist a{
@@ -328,6 +312,7 @@ footer{
         align-items: flex-start;
         text-align: left;
         height: auto;
+        justify-content:flex-start;
     }
 
     /* Navbar goes vertical */
@@ -347,6 +332,7 @@ footer{
         padding: 10px;
         box-shadow: none;
         margin: 0px;
+        background: #ffffff10;
     }
 
     /* ✅ New: show only when JS toggles .open */
@@ -396,7 +382,9 @@ footer{
     }
     /*Intro*/
     #introwords{
-        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+        width: 80%;
     }
     /*Feature Bar*/
     #featuredbar{
@@ -487,4 +475,37 @@ footer{
         color: rgba(72, 58, 179);
     }
 }
-
+#pdf-container{
+    height: 90vh;
+    margin-top: 0px;
+    margin: auto;
+    display:inline-block;
+    justify-content: center;   /* center horizontally */
+    align-items: center;       /* center vertically */
+}
+/* Left + Right blocks */
+.side-block {
+    width: 8vw; /* adjust size */
+    height: 80vh;
+    background: rgb(229, 229, 229);
+    color: gray;
+    border: #1B263B dashed 2px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    overflow-y: hidden;
+}
+.pdf-container {
+    width: 80vw;
+    height: 100vh;               /* take most of screen height */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
